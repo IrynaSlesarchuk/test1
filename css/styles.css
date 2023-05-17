@@ -4,6 +4,8 @@
     --color-accent: #ff3400;
     --color-heading: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
 
 *, *::after, *::before {
@@ -182,7 +184,7 @@ a {
     color: #fff;
 }
 .btn--accent:hover {
-    filter: brightness(300%);
+    filter: brightness(200%);
 }
 
 .btn--outline {
@@ -204,5 +206,40 @@ a {
 @media screen and (min-width: 1024px) {
     .btn {
         font-size: 1.5rem;
+    }
+}
+
+/* Input */
+.input {
+    padding: 1.5 rem 3.5 rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    outline: 0;
+    color: var(--color-heading);
+    font-size: 2rem;
+}
+::placeholder {
+    color: #c5c0cd;
+}
+
+.input-group {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+}
+
+.input-group .input {
+    border: 0;
+    flex-grow: 1;
+    padding-left: 1rem;
+}
+
+.input-group .btn {
+    margin: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    .input {
+        font-size: 2rem;
     }
 }
