@@ -87,7 +87,7 @@ a {
     border-radius: 20px;
     padding: 0.5rem 2rem;
     font-weight: 600;
-    word-spacing: nowrap;
+    white-space: nowrap;
     font-size: 2rem;
 }
 
@@ -101,6 +101,7 @@ a {
 }
 .badge--small {
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 @media screen and (min-width: 1024px) {
     .badge {
@@ -243,3 +244,169 @@ a {
         font-size: 2rem;
     }
 }
+
+/* Cards */
+
+.card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    margin: 5px;
+    overflow: hidden;
+}
+
+.card__header, .card__body {
+    padding: 2rem 3rem;
+}
+
+.card--primary.card__header {
+    background: var(--color-primary);
+    color: #fff;
+}
+.card--secondary.card__header {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.card--secondary .badge--secondary {
+    background: #02cdf1;
+}
+
+/* Plan */
+
+.container {
+    width: 60rem;
+    height: 80rem;
+}
+
+.plan__name {
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.4rem;
+}
+
+.plan__price {
+    font-size: 6rem;
+}
+
+.plan__billing-cycling {
+    font-size: 2.4rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin: 1rem;
+
+}
+
+.plan__description {
+    font-weight: 300;
+    font-size: 2rem;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.plan .list__item {
+    margin-bottom: 2rem;
+}
+
+.plan--popular .card__header {
+    position: relative;
+}
+
+.plan--popular .card__header::before {
+    content: url(../images/wordpress.svg);
+    width: 40px;
+    display: inline-block;
+    position: absolute;
+    top: -25px;
+    right: 5%;
+
+}
+
+@media screen and (min-width: 1024px) {
+    /* .container {
+        width: 40rem;
+        height: 40rem;
+    } */
+    .plan__name {
+        font-size: 1.4rem;
+    }
+    .plan__price {
+        font-size: 5rem;
+    }
+    .plan__billing-cycling {
+        font-size: 1.6rem;
+    }
+    .plan__description {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* media */
+.media {
+    display: flex;
+}
+
+.media__title {
+    margin-top: 0;
+}
+
+.media__body {
+    padding: 0 2rem;
+}
+
+.media__image {
+    margin-top: 1rem;
+}
+
+/* Quotes */
+.quote {
+    font-size: 3rem;
+    font-style: italic;
+    color: #5c5577;
+}
+
+.quote__text::before {
+    content: open-quote;
+}
+
+.quote__text::after {
+    content: close-quote;
+}
+
+.quote__author {
+    font-size: 3rem;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+.quote__company {
+    opacity: 0.4;
+    color: var(--color-heading);
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.quote__line {
+    position: relative;
+    bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .quote {
+        font-size: 2rem;
+    }
+    .quote__author {
+        font-size: 2.4rem;
+    }
+    .quote__company {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+
